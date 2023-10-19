@@ -6,7 +6,7 @@ import Appbar from "@/app/components/Appbar";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import Layout from "@/app/components/Layout";
 import Title from '@/app/components/Title';
-
+import Image from 'next/image';
 
 const AlbumId = () => {
   const router = useRouter();
@@ -38,7 +38,7 @@ const AlbumId = () => {
         </div>
         {photos.map((photo) => (
           <div key={photo.id}>
-            <img className='bg-white w-[1000px] pt-10 p-6 rounded-lg shadow-lg font-mono text-center text-base md:text-lg lg:text-xl py-6' src={photo.thumbnailUrl} alt={photo.title} />
+            <Image className='bg-white w-[1000px] pt-10 p-6 rounded-lg shadow-lg font-mono text-center text-base md:text-lg lg:text-xl py-6' src={photo.thumbnailUrl} alt={photo.title} />
             <div className="bg-white w-[1000px] pt-10 p-6 rounded-lg shadow-lg font-mono text-center text-base md:text-lg lg:text-xl py-6">
               {photo.title}
             </div>
