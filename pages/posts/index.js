@@ -104,26 +104,23 @@ const Posts = () => {
             {errors.body && <span className="text-red-500">{errors.body.message}</span>}
 
             <div>
-                <ul>
+              <ul>
                 {posts.map((post) => (
-        
-                    <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center" key={post.id}>
                     <div className="font-mono bg-white shadow-md rounded p-4 mb-4 mx-auto text-center bg-white w-[1000px] pt-10 p-6 rounded-lg shadow-lg font-mono text-center text-base md:text-lg lg:text-xl py-6">
-                        <li key={post.id}>
-                        <strong>Titulo: </strong>
-                        <Link className="font-mono font-semibold text-blue-500" href={`/posts/${post.id}`}>{post.title}</Link>
-                        <p><strong>Post: </strong>{post.body}</p>
-                        </li>
-                        <button 
+                      <strong>Título: </strong>
+                      <Link className="font-mono font-semibold text-blue-500" href={`/posts/${post.id}`}>{post.title}</Link>
+                      <p><strong>Post: </strong>{post.body}</p>
+                      <button 
                         onClick={() => deletePost(post.id)}
-                        className="bg-gray-500 hover:bg-black-700 text-white font-bold py-2 px-4 rounded ring-2 ring-purple-500/50"
-                        > 
+                        className="bg-gray-500 hover-bg-black-700 text-white font-bold py-2 px-4 rounded ring-2 ring-purple-500/50"
+                      > 
                         Deletar
-                        </button>
+                      </button>
                     </div>
-                    </div>
+                  </div>
                 ))}
-                </ul>
+              </ul>
             </div>
             <Bottom></Bottom>
             </Layout>

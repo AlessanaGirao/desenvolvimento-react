@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 
 const AlbumPhotos = ({ albumId }) => {
   const [photos, setPhotos] = useState([]);
@@ -21,7 +22,7 @@ const AlbumPhotos = ({ albumId }) => {
       <div className="photo-list">
         {photos.map((photo) => (
           <div key={photo.id} className="photo">
-            <img src={photo.thumbnailUrl} alt={photo.title} />
+            <Image src={photo.thumbnailUrl} alt={photo.title} />
             <p>{photo.title}</p>
           </div>
         ))}

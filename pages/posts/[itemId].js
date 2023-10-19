@@ -17,13 +17,13 @@ const PostPage = ({ post, comments }) => {
 
             <ul>
             {comments.map((comment) => (
+                <li key={comment.id}>
                 <div className="bg-white shadow-md rounded p-4 mb-4">
-                    <li key={comment.id}>
                     <p>Título: {comment.name}</p>
                     <p>Email: {comment.email}</p>
                     <p>Body: {comment.body}</p>
-                    </li>
                 </div>
+                </li>
             ))}
             </ul>
             </Layout>

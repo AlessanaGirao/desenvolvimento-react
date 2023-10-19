@@ -40,8 +40,10 @@ const Albums = () => {
       <div>
         <Title>Álbuns do Usuário</Title>
         {albums.map((album) => (
-          <div className='text-center flex items-center justify-center h-screen'>
-          <div className='bg-white w-[1000px] pt-10 p-6 rounded-lg shadow-lg font-mono text-center text-base md:text-lg lg:text-xl py-6 mx-auto' key={album.id}>
+          <div
+            className='bg-white w-[1000px] pt-10 p-6 rounded-lg shadow-lg font-mono text-center text-base md:text-lg lg:text-xl py-6 mx-auto'
+            key={album.id}
+          >
             <h2>{album.title}</h2>
             <button
               className="bg-gray-500 hover:bg-black-700 text-white font-bold py-2 px-4 rounded ring-2 ring-purple-500/50"
@@ -49,7 +51,6 @@ const Albums = () => {
             >
               Abrir Álbum
             </button>
-            </div>
           </div>
         ))}
       </div>
