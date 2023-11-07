@@ -74,6 +74,25 @@ const Drawer = ({ isOpen, onClose }) => {
                 </Link>
                 </li>
                 <li>
+                <Link href={"/cart"}>
+                    <div className="font-mono font-semibold text-lg text-black hover:text-purple-500 flex items-center">
+                    <svg
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        height="1em"
+                        width="1em"
+                        
+                        >
+                        <path
+                        fillRule="evenodd"
+                        d="M10.5 3.5a2.5 2.5 0 00-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 01-2 2H3a2 2 0 01-2-2V4h3.5v-.5a3.5 3.5 0 117 0zM14 14V5H2v9a1 1 0 001 1h10a1 1 0 001-1zM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132z"
+                    />
+                    </svg>
+                    <span className="flex-1 ml-3 whitespace-nowrap">Shop</span>
+                    </div>
+                </Link>
+                </li>
+                <li>
                     <Link href={"/sobre"}>
                         <div className="font-mono font-semibold text-lg text-black hover:text-purple-500 flex items-center">
                         <svg
